@@ -1,0 +1,102 @@
+body {
+  background-image: url("img/fondo.jpg");
+  text-align: center;
+  font-family: "Indie Flower", cursive;
+}
+
+h1 {
+  font-family: "Pacifico", strong, cursive;
+  color: #0099ff;
+}
+
+button {
+  width: 82%;
+  height: 30px;
+  background-color: orange;
+  color: white;
+  font: helvetica;
+  border-radius: 10px;
+  border-style: none;
+  margin: 3px;
+}
+
+.niveles {
+  align-content: center;
+}
+.niveles p {
+  text-align: center;
+}
+
+.login {
+  padding-top: 34px;
+  height: 394px;
+  width: 70%;
+  justify-self: center;
+  border: 15px solid;
+  border-color: black;
+  border-radius: 10px;
+  background-color: #fde9e8;
+  /*Last value modify opacity*/
+  margin: auto;
+}
+.login h1 {
+  align-content: center;
+  justify-self: center;
+  margin: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.tablero {
+  width: 70%;
+  justify-self: center;
+  border: 15px solid;
+  border-color: black;
+  border-radius: 10px;
+  background-color: rgba(206, 181, 188, 0.5);
+  /*Last value modify opacity*/
+  margin: auto;
+}
+
+.cards-container {
+  perspective: 1000px;
+}
+.cards-container .carta {
+  display: inline-block;
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+  border: 3px solid;
+  border-color: salmon;
+}
+.cards-container .carta .tapada .destapada {
+  backface-visibility: hidden;
+}
+.cards-container .carta .tapada {
+  display: inline;
+}
+.cards-container .carta .destapada {
+  display: none;
+}
+.cards-container .carta img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.posiciones {
+  display: none;
+  width: 70%;
+  justify-self: center;
+  border: 15px solid;
+  border-color: black;
+  border-radius: 10px;
+  background-color: rgba(206, 181, 188, 0.5);
+  /*Last value modify opacity*/
+}
+
+/*# sourceMappingURL=styles.css.map */

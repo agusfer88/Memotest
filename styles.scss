@@ -1,0 +1,120 @@
+body{
+    background-image: url("img/fondo.jpg");
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+}
+
+h1{
+    font-family: 'Pacifico', strong, cursive;
+    color: #0099ff;
+}
+button{
+    width: 82%;
+    height: 30px;
+    background-color: orange;
+    color: white;
+    font: helvetica;
+    border-radius: 10px;
+    border-style: none;
+    margin: 3px;
+    
+}
+.niveles{
+  
+    p {
+        text-align: center;}
+    align-content: center;
+    
+}
+.login{
+  
+    padding-top: 34px;
+height: 394px;
+    width: 70%;
+    justify-self: center; 
+    border: 15px solid;
+    border-color: black;
+    border-radius: 10px;
+    background-color: rgba(253, 233, 232, 1.5);/*Last value modify opacity*/
+    margin: auto;
+    h1{
+        align-content: center;
+      
+        justify-self: center; 
+        
+    
+        margin: auto;
+    }
+}
+
+
+
+*{margin: 0; 
+padding: 0;
+box-sizing: border-box;}
+
+.tablero{
+    // display: none;
+    width: 70%;
+    justify-self: center; 
+    border: 15px solid;
+    border-color: black;
+    border-radius: 10px;
+    background-color: rgba(206, 181, 188, 0.5);/*Last value modify opacity*/
+    margin: auto;
+    // .cards-container:hover .card{
+    //     transform: rotateY(180deg); 
+    }  
+  
+    
+.cards-container{
+    perspective: 1000px; 
+    .carta{
+        // position: relative;
+        // width: 100%;
+        // height: 100%;
+        // text-align: center;
+        // transition: transform 0.8s;
+        // transform-style: preserve-3d;
+        display: inline-block;
+        width: 128px;
+        height: 128px;
+        object-fit: cover;
+        border: 3px solid;
+        border-color: salmon;
+        // margin: 1rem; 
+ 
+       .tapada .destapada{
+        backface-visibility: hidden;
+       }
+        .tapada{
+            display: inline;
+    
+
+        }
+        .destapada{
+          display: none;
+            // transform: rotateY(180deg);
+        }
+     
+         
+
+        img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                
+            }
+    }
+}
+
+.posiciones{
+    display: none;
+    width: 70%;
+    justify-self: center; 
+    border: 15px solid;
+    border-color: black;
+    border-radius: 10px;
+    background-color: rgba(206, 181, 188, 0.5);/*Last value modify opacity*/
+
+}
