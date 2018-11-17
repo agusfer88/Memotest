@@ -1,5 +1,5 @@
 $(document).ready(function(){
-      // planteo para login
+  // planteo para login
 
    
   var nombre;
@@ -25,10 +25,10 @@ $(document).ready(function(){
 
 /// agregarlo a la table de posicionesDESPUES
 //botones segun niveles => modifican el nro disponible de intentos
-//le pido que agregue las imagenes ordenandolas de manera random y asignandoles un data carta 
 
 
-// Agregar objetos cartas al array con el data que se repita para compararlas
+
+// ordena las cartas de manera random
 const imagenes = [
 {src: "img/epelante.jpg"},
 {src: "img/alce.jpg"},
@@ -54,13 +54,12 @@ var ruta = imagenes[i].src;
 imagenes.sort(function(){
     return Math.random() - 0,5;
 });
-
-
-///Cuando click ver apunte en cuaderno!
 var clicks = 0
-$(".tapada").on("click", function(){
-    console.log($(this).children().attr('src'))
-})
+
+
+///Cuando clickea la carta 
+
+
 // metodo onclick 
 // -dar vuelta la carta
 // si length esta en 0 
@@ -95,3 +94,8 @@ $(".tapada").on("click", function(){
 
 });
 
+function verCarta(){
+    $(".tapada").on("click", function(){
+        $(this).children().toggleClass("destapada");
+    })
+}
