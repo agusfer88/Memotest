@@ -31,6 +31,7 @@ $(document).ready(function(){
 // Agregar objetos cartas al array con el data que se repita para compararlas
 const imagenes = [
 {src: "img/epelante.jpg"},
+{src: "img/alce.jpg"},
 {src: "img/nena.jpg"},
 {src: "img/peces.jpg"},
 {src: "img/unichancho.jpg"},
@@ -39,7 +40,8 @@ const imagenes = [
 {src: "img/nena.jpg"},
 {src: "img/peces.jpg"},
 {src: "img/unichancho.jpg"},
-{src: "img/zapas.jpg"}
+{src: "img/zapas.jpg"},
+{src: "img/alce.jpg"}
 ];
 var LosDivCard= $(".carta");
 
