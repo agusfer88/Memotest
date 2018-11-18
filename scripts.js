@@ -1,22 +1,37 @@
-$(document).ready(function(){
+
   // planteo para login
 
-   
+  var jugadores = []; 
   var nombre;
+  var intentos;
+  var nivel; 
 
-/// ponerle un on.click 
-    $(".botondificultad").on("click", function(){
-/// tengo que llamar al valor del input $("#nombre").val() 
+  var jugador =  {
+  nombre: nombre.val(),
+  nivel: nivel.val(),
+  intentos: intentos.val()
+}
 
+// agregar contenido a la propiedad nombre de la variable jugador
+  function guardarNombre (){
+
+    // $("#nombre").on("click", function(){
         nombre = $("#nombre").val();
-        console.log(nombre);
-        //agrego en tabla de saludo
-        $(".jugador").push(nombre);
-    });
+
+        jugador.push(nombre)
+   
+
+        // Modificar el contenido de <span class="jugador">
+
+   
+  
+        
+        
+    // })
+ };
 
 
 
-/// agregarlo al span class $(".nombre")
     
 
 
@@ -92,10 +107,15 @@ var clicks = 0
 
 // metodo data index es para comparar las cartas y saber si son iguales
 
-});
+
+
+
 
 function verCarta(){
     $(".tapada").on("click", function(){
         $(this).children().toggleClass("destapada");
     })
 }
+
+// guardarNombre();
+verCarta();

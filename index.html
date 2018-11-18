@@ -18,12 +18,12 @@
         <p>Hola &#x1F44B ! Vamos a jugar al Memotest</p>
         <p>Pero antes de empezar...</p>
         <p>Cual es tu nombre <span>?</span></p>
-        <input type="text"  id="nombre">
+        <input placeholder="Nombre" type="text"  id="nombre">
         <div class="niveles"> 
             <p>Con qué dificultad te gustaría jugar?</p>
-            <button class="facil botondificultad">FACIL</button>
-            <button class="intermedio botondificultad">INTERMEDIO</button>
-            <button class="experto botondificultad">EXPERTO</button>
+            <button class="facil nombre" >FACIL</button>
+            <button class="intermedio nombre" onclick="guardarNombre()">INTERMEDIO</button>
+            <button class="experto nombre" onclick="guardarNombre()">EXPERTO</button>
         </div>
 
     </div>
