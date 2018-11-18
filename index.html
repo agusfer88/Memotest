@@ -21,9 +21,9 @@
         <input placeholder="Nombre" type="text"  id="nombre">
         <div class="niveles"> 
             <p>Con qué dificultad te gustaría jugar?</p>
-            <button class="facil nombre" >FACIL</button>
-            <button class="intermedio nombre" onclick="guardarNombre()">INTERMEDIO</button>
-            <button class="experto nombre" onclick="guardarNombre()">EXPERTO</button>
+            <button class="facil nombre" onclick="guardarJugador()">FACIL</button>
+            <button class="intermedio nombre" onclick="guardarJugador()">INTERMEDIO</button>
+            <button class="experto nombre" onclick="guardarJugador()">EXPERTO</button>
         </div>
 
     </div>
@@ -35,21 +35,22 @@
             <h1>Memotest</h1>
             <p>Hola <span class="jugador"></span>!</p>
             <p>Encontra todos los pares en menos de <span ></span> intentos!</p>
-            <p>Nivel <span></span></p>
+            <p>Nivel <span class="nivel"></span></p>
             <div class="cards-container">
-                <div class="carta tapada" onclick="verCarta()"> <img src="img/tapada.jpg" alt=""></div><!--para ordenar settear widht desktop: 25% mobile 30%-->
-                <div class="carta tapada" onclick="verCarta()"> <img src="img/tapada.jpg" alt=""></div>
-                <div class="carta tapada" onclick="verCarta()"> <img src="img/tapada.jpg" alt=""></div>
-                <div class="carta tapada" onclick="verCarta()"> <img src="img/tapada.jpg" alt=""></div>
-                <div class="carta tapada" onclick="verCarta()"> <img src="img/tapada.jpg" alt=""></div>
-                <div class="carta tapada" onclick="verCarta()"> <img src="img/tapada.jpg" alt=""></div>
-                <div class="carta tapada" onclick="verCarta()"> <img src="img/tapada.jpg" alt=""></div>
-                <div class="carta tapada" onclick="verCarta()"> <img src="img/tapada.jpg" alt=""></div>
-                <div class="carta tapada" onclick="verCarta()"> <img src="img/tapada.jpg" alt=""></div>
-                <div class="carta tapada" onclick="verCarta()"> <img src="img/tapada.jpg" alt=""></div>
-                <div class="carta tapada" onclick="verCarta()"> <img src="img/tapada.jpg" alt=""></div>
-                <div class="carta tapada" onclick="verCarta()"> <img src="img/tapada.jpg" alt=""></div>
+                <div class="carta tapada" > <img src="img/tapada.jpg" alt=""></div><!--para ordenar settear widht desktop: 25% mobile 30%-->
+                <div class="carta tapada"> <img src="img/tapada.jpg" alt=""></div>
+                <div class="carta tapada" > <img src="img/tapada.jpg" alt=""></div>
+                <div class="carta tapada" > <img src="img/tapada.jpg" alt=""></div>
+                <div class="carta tapada" > <img src="img/tapada.jpg" alt=""></div>
+                <div class="carta tapada" > <img src="img/tapada.jpg" alt=""></div>
+                <div class="carta tapada" > <img src="img/tapada.jpg" alt=""></div>
+                <div class="carta tapada" > <img src="img/tapada.jpg" alt=""></div>
+                <div class="carta tapada" > <img src="img/tapada.jpg" alt=""></div>
+                <div class="carta tapada" > <img src="img/tapada.jpg" alt=""></div>
+                <div class="carta tapada" > <img src="img/tapada.jpg" alt=""></div>
+                <div class="carta tapada" > <img src="img/tapada.jpg" alt=""></div>
             </div>
+            <div class="contador">Intentos: <span class="intentos"></span></div>
     </div>
     <div class="posiciones"></div>
 
