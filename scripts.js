@@ -1,39 +1,56 @@
-var jugadores = []; 
   // planteo para login
+  $(document).ready(function () {  
+//  mostrar tablero al hacer click en el boton con clase nombre
+$(".nombre").on("click", function(){
+    $(".tablero").css("display", "block");
+    $(".login").css("display", "none");
+    var nombreJug = $("#nombre").val();
+    $(".jugador").append(nombreJug);
+    
+});
 
+// planteo para guardar propiedades del jugador y el jugador en jugadores
+var jugadores = []; 
+var niveles = [{id:"facil", intentosQ: "18"}, {id: "intermedio", intentosQ: "12"}, {id: "experto", intentosQ: "9"}];
+const jugador =  {
+    nombre: '',
+    nivel: '',
+    intentos: 0
+    };
 
-
-  function guardarJugador (){
-    var nombre = $("#nombre").val();
-    var nivel =$()
-    var intentos= $(".intentos").val();
   
-    var jugador =  {
-      nombre: nombre,
-      nivel: nivel,
-      intentos: intentos
-      }
-  
-      nivel = $(".facil").on("click", function() { 
-        nivel = 18
-      
+
+    
+
+// Modifica las propiedades del objeto jugador al clickear 
+    $(".facil").on("click", function() { 
+        var nombre = $("#nombre").val();
+        jugador.nombre = nombre;
+        jugador.nivel = niveles[0].id;
+        jugador.intentos = niveles[0].intentosQ;
+        $('.nivel').append(jugador.nivel);
+        $('.intentos').append(jugador.intentos);
+        jugadores.push(jugador);//esto seguramente cambiara para tener los resultados finales
     });
-    nivel = $(".intermedio").on("click", function() { 
-        nivel = 12
+    $(".intermedio").on("click", function() {
+        var nombre = $("#nombre").val();
+        jugador.nombre = nombre;
+        jugador.nivel = niveles[1].id;
+        jugador.intentos = niveles[1].intentosQ;
+        $('.nivel').append(jugador.nivel);
+        $('.intentos').append(jugador.intentos);
+        jugadores.push(jugador);//esto seguramente cambiara para tener los resultados finales
     });
-    nivel =  $(".experto").on("click", function() { 
-        nivel = 9
+    $(".experto").on("click", function() { 
+        var nombre = $("#nombre").val();
+        jugador.nombre = nombre;
+        jugador.nivel = niveles[2].id;
+        jugador.intentos = niveles[2].intentosQ;
+        $('.nivel').append(jugador.nivel);
+        $('.intentos').append(jugador.intentos);
+        jugadores.push(jugador);//esto seguramente cambiara para tener los resultados finales
     });
-
-
-    jugadores.push(jugador);
- console.log(jugadores);
-  }
-
-
-function guardarNivel(){
-
-}
+});
 
     
 
@@ -41,7 +58,6 @@ function guardarNivel(){
 
 
 
-/// agregarlo a la table de posicionesDESPUES
 //botones segun niveles => modifican el nro disponible de intentos
 
 
@@ -69,7 +85,7 @@ var id = imagenes[i].id;
    var imgDestapada= $("<img class='destapada front' src="+ ruta +" id="+id+">");
    LosDivCard.eq(i).append(imgDestapada);
 }
-
+//no funcionaria el random VER
 imagenes.sort(function(){
     return Math.random() - 0,5;
 });

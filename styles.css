@@ -52,6 +52,8 @@ button {
 }
 
 .tablero {
+  display: none;
+  z-index: 1;
   width: 70%;
   justify-self: center;
   border: 15px solid;

@@ -21,10 +21,11 @@
         <input placeholder="Nombre" type="text"  id="nombre">
         <div class="niveles"> 
             <p>Con qué dificultad te gustaría jugar?</p>
-            <button class="facil nombre" onclick="guardarJugador()">FACIL</button>
-            <button class="intermedio nombre" onclick="guardarJugador()">INTERMEDIO</button>
-            <button class="experto nombre" onclick="guardarJugador()">EXPERTO</button>
+            <button class="facil nombre" >FACIL</button>
+            <button class="intermedio nombre">INTERMEDIO</button>
+            <button class="experto nombre" >EXPERTO</button>
         </div>
+        <div id='error'>UPSS... El nombre es requerido</div>
 
     </div>
     
@@ -34,7 +35,7 @@
     <div class="tablero" >
             <h1>Memotest</h1>
             <p>Hola <span class="jugador"></span>!</p>
-            <p>Encontra todos los pares en menos de <span ></span> intentos!</p>
+            <p>Encontra todos los pares en menos de <span class="intentos"></span> intentos!</p>
             <p>Nivel <span class="nivel"></span></p>
             <div class="cards-container">
                 <div class="carta tapada" > <img src="img/tapada.jpg" alt=""></div><!--para ordenar settear widht desktop: 25% mobile 30%-->
