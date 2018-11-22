@@ -77,6 +77,9 @@ const imagenes = [
 {src: "img/zapas.jpg", id:"zapas1"},
 {src: "img/alce.jpg", id:"alce2"}
 ];
+imagenes.sort(function(a, b){
+    return Math.random() - Math.random(0,5);
+});
 var LosDivCard= $(".carta");
 
 for (let i = 0; i < LosDivCard.length; i++) {
@@ -86,9 +89,7 @@ var id = imagenes[i].id;
    LosDivCard.eq(i).append(imgDestapada);
 }
 //no funcionaria el random VER
-imagenes.sort(function(){
-    return Math.random() - 0,5;
-});
+
 
 // PLANTEO PARA COMPARAR CARTAS
 var clicks = 0;
