@@ -2,10 +2,16 @@
   $(document).ready(function () {  
 //  mostrar tablero al hacer click en el boton con clase nombre
 $(".nombre").on("click", function(){
+    if ($("#nombre").val() == '') {
+        console.log("entro al validador")
+        $("#error").removeClass("hide");
+    } else {
+   
     $(".tablero").css("display", "block");
     $(".login").css("display", "none");
     var nombreJug = $("#nombre").val();
-    $(".jugador").append(nombreJug);
+    $(".jugador").append(nombreJug); 
+}
     
 });
 
@@ -22,8 +28,10 @@ const jugador =  {
 
     
 
-// Modifica las propiedades del objeto jugador al clickear 
+// // Modifica las propiedades del objeto jugador al clickear 
     $(".facil").on("click", function() { 
+        if ($("#nombre").val() != '') {            
+        
         var nombre = $("#nombre").val();
         jugador.nombre = nombre;
         jugador.nivel = niveles[0].id;
@@ -31,8 +39,10 @@ const jugador =  {
         $('.nivel').append(jugador.nivel);
         $('.intentos').append(jugador.intentos);
         jugadores.push(jugador);//esto seguramente cambiara para tener los resultados finales
+        }
     });
     $(".intermedio").on("click", function() {
+        if ($("#nombre").val() != '') { 
         var nombre = $("#nombre").val();
         jugador.nombre = nombre;
         jugador.nivel = niveles[1].id;
@@ -40,8 +50,10 @@ const jugador =  {
         $('.nivel').append(jugador.nivel);
         $('.intentos').append(jugador.intentos);
         jugadores.push(jugador);//esto seguramente cambiara para tener los resultados finales
+        }
     });
     $(".experto").on("click", function() { 
+        if ($("#nombre").val() != '') { 
         var nombre = $("#nombre").val();
         jugador.nombre = nombre;
         jugador.nivel = niveles[2].id;
@@ -49,6 +61,7 @@ const jugador =  {
         $('.nivel').append(jugador.nivel);
         $('.intentos').append(jugador.intentos);
         jugadores.push(jugador);//esto seguramente cambiara para tener los resultados finales
+        }
     });
 });
 
