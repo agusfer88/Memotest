@@ -17,7 +17,9 @@ $(".nombre").on("click", function(){
 
 // planteo para guardar propiedades del jugador y el jugador en jugadores
 var jugadores = []; 
-var niveles = [{id:"facil", intentosQ: "18"}, {id: "intermedio", intentosQ: "12"}, {id: "experto", intentosQ: "9"}];
+var niveles = [{id:"facil", intentosQ: "18"}, 
+    {id: "intermedio", intentosQ: "12"}, 
+    {id: "experto", intentosQ: "9"}];
 const jugador =  {
     nombre: '',
     nivel: '',
@@ -90,6 +92,7 @@ const imagenes = [
 {src: "img/zapas.jpg", id:"zapas1"},
 {src: "img/alce.jpg", id:"alce2"}
 ];
+
 imagenes.sort(function(a, b){
     return Math.random() - Math.random(0,5);
 });
@@ -98,7 +101,7 @@ var LosDivCard= $(".carta");
 for (let i = 0; i < LosDivCard.length; i++) {
 var ruta = imagenes[i].src;
 var id = imagenes[i].id;
-   var imgDestapada= $("<img class='destapada front' src="+ ruta +" id="+id+">");
+   var imgDestapada= $("<div class='destapada front face'><img  src="+ ruta +" id="+id+"></div>");
    LosDivCard.eq(i).append(imgDestapada);
 }
 //no funcionaria el random VER
@@ -113,13 +116,16 @@ $(".carta").on('click', function(){
 
 
  const imgSrc = $('this').children($(".front")).attr('src')
+ 
     
 
     const id = $('this').attr('id')
+  
     if (clicks == 1){
         carta1 = {
             src: imgSrc,
             id: id
+            
         }
     }
     else {
@@ -181,8 +187,10 @@ $(".carta").on('click', function(){
 
 
 function verCarta(){
-    $(".tapada").on("click", function(){
+    $(".carta").on("click", function(){
+        $(this).addClass("flip");
         $(this).children().toggleClass("destapada");
+        
     })
 }
 
