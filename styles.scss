@@ -67,7 +67,10 @@ box-sizing: border-box;}
     background-color: rgba(206, 181, 188, 0.5);/*Last value modify opacity*/
     margin: auto;
     // 
-
+    .flip {
+        //     
+        transform: rotateY(180deg);   
+        }  
   
     
 .cards-container{
@@ -80,11 +83,11 @@ box-sizing: border-box;}
         // 
         transition: transform 0.8s;
         // 
-        transform-style: preserve-3d;
+        // transform-style: preserve-3d;
         display: inline-block;
         width: 128px;
         height: 128px;
-        object-fit: cover;
+        // object-fit: cover;
         border: 3px solid;
         border-color: salmon;
         // margin: 1rem; 
@@ -97,16 +100,16 @@ box-sizing: border-box;}
         backface-visibility: hidden;
         z-index: 2;
        }
-       .flip {
-        //     
-        transform: rotateY(180deg);   
-        }  
+     
         .tapada{
             display: inline;
             z-index: 1;
             cursor: pointer;
     
 
+        }
+        .nonea{
+            display: none;
         }
         .destapada{
           display: none;
@@ -125,6 +128,7 @@ box-sizing: border-box;}
     }
 }
 }
+
 
 .posiciones{
     display: none;

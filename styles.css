@@ -66,16 +66,17 @@ button {
   /*Last value modify opacity*/
   margin: auto;
 }
+.tablero .flip {
+  transform: rotateY(180deg);
+}
 .tablero .cards-container {
   perspective: 1000px;
 }
 .tablero .cards-container .carta {
   transition: transform 0.8s;
-  transform-style: preserve-3d;
   display: inline-block;
   width: 128px;
   height: 128px;
-  object-fit: cover;
   border: 3px solid;
   border-color: salmon;
 }
@@ -87,13 +88,13 @@ button {
   backface-visibility: hidden;
   z-index: 2;
 }
-.tablero .cards-container .carta .flip {
-  transform: rotateY(180deg);
-}
 .tablero .cards-container .carta .tapada {
   display: inline;
   z-index: 1;
   cursor: pointer;
+}
+.tablero .cards-container .carta .nonea {
+  display: none;
 }
 .tablero .cards-container .carta .destapada {
   display: none;
