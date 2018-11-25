@@ -2,7 +2,8 @@
   const jugador =  {
     nombre: '',
     nivel: '',
-    intentos: 0
+    intentos: 0,
+    pares: 0
     };
   $(document).ready(function () {  
 //  mostrar tablero al hacer click en el boton con clase nombre
@@ -28,6 +29,7 @@ var niveles = [{id:"facil", intentosQ: "18"},
     {id: "experto", intentosQ: "9"}];
 
 
+
   
 
     
@@ -40,6 +42,7 @@ var niveles = [{id:"facil", intentosQ: "18"},
         jugador.nombre = nombre;
         jugador.nivel = niveles[0].id;
         jugador.intentos = niveles[0].intentosQ;
+        
         $('.nivel').append(jugador.nivel);
         $('.intentos').append(jugador.intentos);
         jugadores.push(jugador);//esto seguramente cambiara para tener los resultados finales
@@ -133,7 +136,7 @@ function contarClicks(that){
  
             
         }
-        else  {
+        else if (clicks == 2)  {
            
             carta2 = {
                 src: imgSrc,
@@ -146,17 +149,24 @@ function contarClicks(that){
             
 
     }
+    let pares = 0;
 function compararCartas(carta1, carta2){
 
     if (carta1.src == carta2.src && carta1.id != carta2.id){
+        
+        pares = pares + 1;
         console.log("iguales")
-
+        $('#'+carta1.id).addClass("greyscale");
+        $('#'+carta2.id).addClass("greyscale");
+        
+        console.log(pares)
         clicks = 0;
+        youWin(pares);
     }
     else{
         console.log('distintos')
         jugador.intentos = jugador.intentos-1
-        $('.intentos').html(jugador.intentos);
+        $(".contador").children($('.intentos')).html(jugador.intentos);
         console.log(jugador.intentos)
         clicks = 0;
        
@@ -169,6 +179,7 @@ function compararCartas(carta1, carta2){
             $('#'+carta2.id).parent().toggleClass("destapada");
              
         }, 1300)
+        gameOver();
         
       
      
@@ -180,37 +191,24 @@ function compararCartas(carta1, carta2){
 
 };
 
+function gameOver(){
+    if ( jugador.intentos == 0){
+     console.log("perdiste");
+    //  mostrar boton jugar de nuevo
+    }
 
-///Cuando clickea la carta 
-
-// si lenght esta en 1
-// comparar data carta
-//     si son iguales: hacer gris   
-//     falso: dar vuelta
-
-
-// planteo para contar intentos
-
-
-/// consultar tengo que crear una variable que me aumente por cada click = Click++
-//entonces los intentos van a bajar de dos en dos segun los clicks que yo haga (ver ejercicio que iba iterando de a dos)
-
-
-
-// function ocultarCarta(){  
-   
-//     $('#'+carta1.id).parent().siblings().toggleClass("nonea");
-//     $('#'+carta1.id).parent().parent().removeClass("flip");
-//     $('#'+carta1.id).parent().toggleClass("destapada");
-//     $('#'+carta2.id).parent().siblings().toggleClass("nonea");
-//     $('#'+carta2.id).parent().parent().removeClass("flip");
-//     $('#'+carta2.id).parent().toggleClass("destapada");
+};
+function youWin(){
+    if(pares == 6){
+        console.log("ganaste")
+    }
+}
   
     
     
    
     
-// }
+
 function verCarta(){
     
     $(".carta").on("click",  function(){
@@ -225,16 +223,6 @@ function verCarta(){
 
 
 
-// function verCarta(){
-    
-//     $(".carta").on("click",  function(){
-//         contarClicks($(this));
-//         $(this).children(".tapada").toggleClass("nonea");
-//         $(this).addClass("flip");
-//         $(this).children(".face").toggleClass("destapada");
-//     })
-    
-// }
 
 
 verCarta();
