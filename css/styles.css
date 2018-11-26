@@ -141,4 +141,28 @@ button {
   margin: auto;
 }
 
+@media (max-width: 800px) {
+  .login {
+    width: 50%;
+    height: 100%;
+  }
+
+  button {
+    width: 82%;
+    margin: 1px;
+  }
+
+  input {
+    width: 90px;
+  }
+
+  .tablero {
+    width: 50%;
+  }
+  .tablero .cards-container .carta {
+    height: 56px;
+    width: 56px;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
