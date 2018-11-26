@@ -1,5 +1,5 @@
 body{
-    background-image: url("img/fondo.jpg");
+    background-image: url("../img/fondo.jpg");
     text-align: center;
     font-family: 'Indie Flower', cursive;
 }
@@ -108,14 +108,34 @@ box-sizing: border-box;}
     filter: grayscale(100%);
     border-color: gray;
 }
-
-.posiciones{
+.hide{
     display: none;
+    }
+.posiciones{
+
+    background-color: rgba(206, 181, 188, 0.5);/*Last value modify opacity*/
+    padding-top: 34px;
+    height: 394px;
     width: 70%;
     justify-self: center; 
     border: 15px solid;
     border-color: black;
     border-radius: 10px;
-    background-color: rgba(206, 181, 188, 0.5);/*Last value modify opacity*/
+    margin: auto;
+    h1{
+        align-content: center;      
+        justify-self: center; 
+        margin: auto;
+    }
+    #tablaRanking{
+        align-content: center;      
+        justify-self: center; 
+        margin: auto;
+    }
+
+ 
+
 
 }
+
+// falta mediaQuery
