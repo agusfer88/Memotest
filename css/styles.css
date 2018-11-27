@@ -142,9 +142,20 @@ button {
 }
 
 @media (max-width: 800px) {
+  h1 {
+    font-family: "Pacifico", strong, cursive;
+    color: #0099ff;
+    font-size: 26px;
+  }
+
   .login {
-    width: 50%;
+    width: 80%;
     height: 100%;
+  }
+  .login h1 {
+    font-family: "Pacifico", strong, cursive;
+    color: #0099ff;
+    font-size: 26px;
   }
 
   button {
@@ -157,7 +168,12 @@ button {
   }
 
   .tablero {
-    width: 50%;
+    width: 80%;
+  }
+  .tablero h1 {
+    font-family: "Pacifico", strong, cursive;
+    color: #0099ff;
+    font-size: 26px;
   }
   .tablero .cards-container .carta {
     height: 56px;

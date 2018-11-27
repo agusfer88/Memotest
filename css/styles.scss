@@ -138,10 +138,21 @@ box-sizing: border-box;}
 
 }
 @media (max-width:800px) {
+    h1{
+        font-family: 'Pacifico', strong, cursive;
+        color: #0099ff;
+        font-size: 26px;
+
+    }
     .login{
-        width: 50%;
+        width: 80%;
         height: 100%;
-        
+        h1{
+            font-family: 'Pacifico', strong, cursive;
+            color: #0099ff;
+            font-size: 26px;
+    
+        }
     }
     button{
         width: 82%;
@@ -153,7 +164,13 @@ box-sizing: border-box;}
     }
 
     .tablero{
-        width: 50%;
+        h1{
+            font-family: 'Pacifico', strong, cursive;
+            color: #0099ff;
+            font-size: 26px;
+    
+        }
+        width: 80%;
         .cards-container{
         .carta{
             height: 56px;
@@ -164,4 +181,3 @@ box-sizing: border-box;}
 }
 }
 
-// falta mediaQuery
